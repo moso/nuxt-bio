@@ -1,0 +1,128 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0,0,0,.1);
+    
+    .card\:header {
+        display: flex;
+        width: 100%;
+        padding: 1rem;
+        background-color: $blue-dark;
+        color: #a7b6bd;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        
+        .card\:info {
+            height: $header-height;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            h3 {
+                margin: 0 0 5px;
+                font-weight: 600;
+                line-height: 1;
+            }
+
+            p {
+                margin: 0;
+                font-weight: 300;
+                line-height: 1;
+            }
+        }
+        
+        .card\:image {
+            display: flex;
+            align-items: center;
+            height: $header-height;
+            margin-left: auto;
+            
+            img {
+                width: auto;
+                height: $header-height;
+                border-radius: 50%;
+                border: 2px solid #eee;
+            }
+        }
+    }
+    
+    .card\:content {
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            
+            li {
+                height: $link-height;
+                border-bottom: 1px solid #eee;
+                
+                a {
+                    display: flex;
+                    padding: 1rem 1.5rem;
+                    text-decoration: none;
+                    outline: none;
+                    
+                    &:hover,
+                    &:focus,
+                    &:active,
+                    &:hover:active {
+                        background-color: rgba(#2d3844,.04)
+                    }
+                    
+                    .collection {
+                        display: flex;
+                        flex-direction: row;
+                        
+                        .collection\:icon {
+                            display: flex;
+                            align-items: center;
+                            width: 43px;
+                            height: 47px;
+                        }
+                        
+                        .collection\:data {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            height: 47px;
+                            margin-left: 1.5rem;
+                            
+                            h3 {
+                                margin: 0;
+                                font-size: 1.5rem;
+                                color: #2d3844;
+                            }
+                            
+                            span {
+                                font-size: .875rem;
+                                font-weight: 300;
+                                color: rgba(#2d3844, .75);
+                            }
+                        }
+                        
+                        
+                        svg {
+                            max-width: 43px;
+                            height: calc(80px - 2rem);
+                            
+                            &.ghost {
+                                height: calc(70px - 2rem);
+                            }
+                        }
+                    }
+                }
+                
+                &:last-of-type {
+                    border-bottom: 0;
+                    
+                    a {
+                        // lame box-shadow
+                        padding: calc(1rem + .5px) 1.5rem calc(1rem + .5px) 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+}

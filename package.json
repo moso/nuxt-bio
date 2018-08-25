@@ -1,0 +1,32 @@
+{
+  "name": "nuxt-bio",
+  "version": "1.0.0",
+  "description": "Bio site made with Nuxt.js",
+  "author": "Morten Sørensen",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "precommit": "npm run lint"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.3.1",
+    "axios": "^0.18.0",
+    "flexgrid.co": "^2.5.0",
+    "nuxt": "^1.4.2",
+    "strapi-sdk-javascript": "^0.2.1",
+    "vue": "^2.5.17"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.6",
+    "eslint": "^5.4.0",
+    "eslint-friendly-formatter": "^4.0.1",
+    "eslint-loader": "^2.1.0",
+    "eslint-plugin-vue": "^4.7.1",
+    "node-sass": "^4.9.3",
+    "sass-loader": "^7.1.0"
+  }
+}
