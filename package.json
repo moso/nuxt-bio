@@ -17,7 +17,6 @@
     "axios": "^0.18.0",
     "flexgrid.co": "^2.5.0",
     "nuxt": "^1.4.2",
-    "strapi-sdk-javascript": "^0.2.1",
     "vue": "^2.5.17"
   },
   "devDependencies": {
