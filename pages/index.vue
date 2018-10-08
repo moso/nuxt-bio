@@ -86,7 +86,7 @@ export default {
     },
 
     asyncData({ req, params }) {
-        return axios.get('https://api.morten.is/link')
+        return axios.get('https://api.morten.is/links')
         .then((res) => {
             return { links: res.data }
         })
@@ -98,7 +98,7 @@ export default {
     .footer {
         margin-top: .5rem;
         text-align: center;
-        
+
         a {
             text-decoration: none;
             outline: none;
