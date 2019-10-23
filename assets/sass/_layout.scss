@@ -7,7 +7,7 @@ html, body {
 }
 
 body {
-    background-color: #eee;
+    background-color: $gray;
     font-family: $font;
     font-size: 1rem;
     color: $text-color;
@@ -28,15 +28,15 @@ body {
     }
 }
 
-.container\:fluid {
+.container-fluid {
     height: 100%;
-    
+
     > .row {
         height: 100%;
-        
+
         .xl {
             margin: 1rem 0;
-            
+
             @media (min-width: 576px) {
                 max-width: 460px;
             }
