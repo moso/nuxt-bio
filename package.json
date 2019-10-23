@@ -1,6 +1,6 @@
 {
   "name": "nuxt-bio",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Bio site made with Nuxt.js",
   "author": "Morten Sørensen",
   "private": true,
@@ -13,19 +13,25 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
-    "@nuxtjs/axios": "^5.3.6",
-    "axios": "^0.18.0",
-    "flexgrid.co": "^2.5.0",
-    "nuxt": "^2.3.4",
-    "vue": "^2.5.21"
+    "@nuxtjs/pwa": "latest",
+    "axios": "^0.19.0",
+    "flexgrid.io": "^3.0.3",
+    "nuxt": "^2.10.2",
+    "nuxt-webfontloader": "^1.1.0"
   },
   "devDependencies": {
-    "babel-eslint": "^10.0.1",
-    "eslint": "^5.11.0",
+    "@nuxtjs/eslint-config": "^1.1.2",
+    "@nuxtjs/eslint-module": "^1.1.0",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.5.1",
+    "eslint-config-prettier": "^6.4.0",
     "eslint-friendly-formatter": "^4.0.1",
-    "eslint-loader": "^2.1.1",
-    "eslint-plugin-vue": "^5.0.0",
-    "node-sass": "^4.11.0",
-    "sass-loader": "^7.1.0"
+    "eslint-plugin-nuxt": ">=0.4.3",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-vue": "^5.2.3",
+    "husky": "^3.0.9",
+    "node-sass": "^4.12.0",
+    "prettier": "^1.18.2",
+    "sass-loader": "^8.0.0"
   }
 }
