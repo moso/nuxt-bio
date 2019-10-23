@@ -1,11 +1,16 @@
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600');
-
+// Fonts
 $font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 $font: "Source Sans Pro", $font-stack;
 
+// Colors
+$gray: #eee;
 $dark: #222;
+$light: #fff;
 $blue-dark: #2d3844;
+$card-header-color: #a7b6bd;
 $text-color: $dark;
 
+// Magic numbers
 $header-height: 57px;
 $link-height: 80px;
+$border-radius: 4px;
