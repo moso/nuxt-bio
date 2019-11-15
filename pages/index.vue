@@ -4,13 +4,7 @@
             <div class="row xs-justify-center xs-items-center">
                 <div class="xl">
                     <moso-card header-name="Morten Sørensen" header-title="Front-End Engineer" image="/images/profile.jpg">
-                        <moso-link
-                            v-for="link in links"
-                            :key="link.id"
-                            :icon="link.icon"
-                            :url="link.url"
-                            :text="link.text"
-                            :subtext="link.subtext" />
+                        <moso-link v-for="link in links" :key="link.id" :icon="link.icon" :url="link.url" :text="link.text" :subtext="trimUrl(link.url)" />
                     </moso-card>
                     <div class="footer">
                         <span>Made with</span>
@@ -64,8 +58,6 @@
 </template>
 
 <script>
-import axios from 'axios'
-
 import MosoCard from '~/components/moso-card.vue'
 import MosoLink from '~/components/moso-link.vue'
 
@@ -75,15 +67,28 @@ export default {
         'moso-link': MosoLink
     },
 
-    data() {
-        return {
-            links: []
+    async fetch({ error, store }) {
+        try {
+            await store.dispatch('getLinks')
+        } catch(err) {
+            error({
+                statusCode: 500,
+                message: err.message
+            })
+            throw err
         }
     },
 
-    async asyncData({ req, params }) {
-        const { data } = await axios.get('https://api.morten.is/links')
-        return { links: data }
+    computed: {
+        links() {
+            return this.$store.state.links
+        }
+    },
+
+    methods: {
+        trimUrl(url) {
+            return url.replace(/^(?:https?:\/\/)?(?:www\.)?/i, "")
+        }
     }
 }
 </script>
