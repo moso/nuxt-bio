@@ -13,14 +13,14 @@ Change the values with the comment `// Change me` in the following files:
 You can easily put this on Netlify. Just add the `links` environment variable to your deploy settings and `@nuxtjs/dotenv` will automatically pick it up.
 
 ## Changelog
+**1.2.1**:
+- Security updates
+
 **1.2.0**:
 - Updated the project to use Vuex
 - Moved config files into `/config` to clean up the Nuxt config
 - Updated the eslint config
 - Updated dependencies
-
-**1.1.1**:
-- Security updates
 
 **1.1.0**:
 - Added PWA module
