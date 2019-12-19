@@ -19,6 +19,9 @@ You can easily put this on Netlify. Just add the `links` environment variable to
 - Updated the eslint config
 - Updated dependencies
 
+**1.1.1**:
+- Security updates
+
 **1.1.0**:
 - Added PWA module
 - Fixed some styling issues
